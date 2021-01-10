@@ -113,3 +113,25 @@ $ docker ps -q
 $ docker stop -t 0 $(docker ps -q)
 
 #################################################
+
+# Criar container baseado na imagem do ubuntu (local do volume criado automaticamente pelo docker)
+$ docker run -v "/var/www" ubuntu
+
+# Inspecionar o volume criado
+# docker inspect + id
+$ docker inspect 3d6106c3cc31
+
+# Criando container especificando local do volume:
+$ docker run -it -v "C:\Users\Wesley\Desktop:/var/www" ubuntu
+
+# Após o comando anterior, criar um documento com:
+$ touch primeiro-arquivo.txt
+
+# Editar esse arquivo:
+$ echo "Este arquivo foi criado dentro de um volume usando Docker"
+
+# Remover container
+$ docker container prune
+# Após a exclusão do container, os dados permanecem na pasta desktop que foi mapeada (Volume)
+
+#################################################
