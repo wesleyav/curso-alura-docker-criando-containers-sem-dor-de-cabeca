@@ -143,3 +143,34 @@ $ docker run -d -p 8080:3000 -v "C:\Users\Wesley\Desktop\volume-exemplo:/var/www
 # http://localhost:8080/
 
 #################################################
+
+# Criar na pasta do projeto (C:\Users\Wesley\Desktop\volume-exemplo) um arquivo chamado Dockerfile contendo:
+FROM node:latest
+LABEL maintainer="Douglas Quintanilha"
+ENV NODE_ENV=production
+ENV PORT=3000
+COPY . /var/www
+WORKDIR /var/www
+RUN npm install
+ENTRYPOINT ["npm", "start"]
+EXPOSE $PORT
+
+# Criar a imagem a partir do dockerfile (build)
+# docker build -f + nome do arquivo do dockerfile -t douglas/node
+# Abrir o PowerShell dentro da pasta do projeto e executar:
+$ docker build -f Dockerfile -t douglasq/node .
+
+# Visualizar imagens criadas
+$ docker images
+
+# Para e remove o container
+# docker rm -f + id do container
+$ docker rm -f 1av
+
+# Executar nova imagem que foi criada
+$ docker run -d -p 8080:3000 douglasq/node
+
+# Acessar no va navegador:
+# http://localhost:8080/
+
+#################################################
