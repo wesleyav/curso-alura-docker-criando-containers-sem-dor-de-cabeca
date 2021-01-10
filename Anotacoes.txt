@@ -64,3 +64,52 @@ $ docker rmi hello-world
 $ docker run ubuntu:14.04
 
 #################################################
+
+# Criar um container estático (imagem de um usuário)
+$ docker run dockersamples/static-site
+
+# Criar um container estático (imagem de um usuário) sem travar o terminal
+$ docker run -d dockersamples/static-site
+
+# Parar container com zero segundos
+# docker stop -t 0 + id
+$ docker stop -t 0 ca8
+
+# Linkar porta interna do container para ser acessada pela máquina externa (PC) deixando o docker atribuir uma porta automaticamente (parâmetro -P)
+$ docker run -d -P dockersamples/static-site
+
+# Visualizar portas do container
+# docker port + id do container
+$ docker port + ca8
+# Acessar no navegador localhost + porta que apresenta na saída do comando anterior
+# localhost:55002
+
+# Visualizar ip se estiver usando docker tool box
+$ docker-machine ip
+
+# Criar um container estático definindo nome 
+$ docker run -d -P --name meu-site dockersamples/static-site
+
+# Parar container nomeado
+$ docker stop meu-site
+
+# Criando container e definindo porta manualmente (parâmetro -p)
+$ docker run -d -p 12345:80 dockersamples/static-site
+
+# Visualizar portas do container
+# docker port + id do container
+$ docker port + ca8
+
+# Acessar no navegador localhost + porta que apresenta na saída do comando anterior
+# localhost:12345
+
+# Criando container, definindo porta manualmente e criando variável de ambiente (aparece na tela inicial)
+$ docker run -d -P -e AUTHOR=Container UP OK!" dockersamples/static-site
+
+# Listar id dos containers
+$ docker ps -q
+
+# Parar mais de um container pelo id
+$ docker stop -t 0 $(docker ps -q)
+
+#################################################
