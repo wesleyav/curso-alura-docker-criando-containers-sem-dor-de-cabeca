@@ -192,10 +192,24 @@ $ docker push douglasq/node
 # docker pull + nome da imagem (pull baixa, run baixa e roda)
 $ docker pull douglasq/node
 
+#################################################
 
+# Subir container
+$ docker run -it ubuntu
 
+# Verificar ip
+$ hostname -i
 
+# Criar network
+$ docker network create --driver bridge minha-rede
 
+# Listar os nomes da rede
+$ docker network ls
 
+# Criar container e atrelar a uma detemrinada rede
+$ docker run -it --name meu-container-de-ubuntu --network minha-rede ubuntu
 
+# Inspecionar 
+$ docker inspect meu-container-de-ubuntu
 
+#################################################
