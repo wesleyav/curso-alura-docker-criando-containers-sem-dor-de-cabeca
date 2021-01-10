@@ -17,3 +17,31 @@ $ docker run hello-world
 # https://labs.play-with-docker.com/
 
 #################################################
+
+# Links úteis:
+# https://hub.docker.com/
+
+# Baixar imagem do ubuntu
+$ docker run ubuntu
+
+# Exibir containers ativos:
+$ docker ps
+
+# Exibir todos os containers criados e inclusive os parados:
+$ docker ps -a
+
+# Associar o terminal ao temrinal da imagem usada:
+$ docker run -it ubuntu
+
+# Subir a imagem
+# docker start + id do container
+$ docker start 
+
+# Parar imagem
+# docker stop + id do container
+$ docker stop 
+
+# Iniciar a imagem e já associar o terminal ao da imagem usada
+# docker start -a -i + id do container
+
+#################################################
