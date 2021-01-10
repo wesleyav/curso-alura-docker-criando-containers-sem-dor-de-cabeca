@@ -308,3 +308,34 @@ networks:
 ### fim ###
 
 #################################################
+
+# Build das imagens a partir do docker-compose
+$ docker-compose build
+
+# Visualizar imagens
+$ docker images
+
+# Executa o docker-compose.yml e roda todos os serviços configurados
+$ docker-compose up
+
+# Acessar no navegador:
+# http://localhost:8080
+# http://localhost:8080/seed
+# http://localhost:8080
+
+# Executa o docker-compose.yml e roda todos os serviços configurados e libera o terminal
+$ docker-compose up -d
+
+# Lista os serviços ativos
+$ docker-compose ps
+
+# Para os serviços
+$ docker-compose down
+
+# Testando conectividade entre containers
+$ docker exec -it alura-books-1 ping alura-books-2
+
+# Testando conectividade entre containers pelo nome do serviço
+$ docker exec -it alura-books-1 ping node2
+
+#################################################
