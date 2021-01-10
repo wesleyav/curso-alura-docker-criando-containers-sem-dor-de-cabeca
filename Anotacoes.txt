@@ -174,3 +174,28 @@ $ docker run -d -p 8080:3000 douglasq/node
 # http://localhost:8080/
 
 #################################################
+
+# Acessar Docker Hub (criar conta)
+# https://hub.docker.com
+
+# No PowerShell, logar com sua conta:
+$ docker login
+# Inserir usuário e senha
+
+# Subir imagem para o repositório
+# docker push + nome
+$ docker push douglasq/node
+
+# Acessar conta do Docker Hub e verificar imagem salva
+
+# Para baixar a imagem:
+# docker pull + nome da imagem (pull baixa, run baixa e roda)
+$ docker pull douglasq/node
+
+
+
+
+
+
+
+
