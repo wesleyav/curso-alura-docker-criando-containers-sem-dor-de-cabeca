@@ -233,3 +233,8 @@ $ docker run --network minha-rede -d -p 8080:3000 douglasq/alura-books:cap05
 # http://localhost:8080
 
 #################################################
+
+# Baixar uma imagem de um usuário especifico:
+$ docker pull NOME_USUARIO/NOME_IMAGEM
+
+#################################################
