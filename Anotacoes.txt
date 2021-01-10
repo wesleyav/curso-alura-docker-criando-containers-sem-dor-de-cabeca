@@ -135,3 +135,11 @@ $ docker container prune
 # Após a exclusão do container, os dados permanecem na pasta desktop que foi mapeada (Volume)
 
 #################################################
+
+# Criando container, exibindo código rodando Node, utilizando volume
+$ docker run -d -p 8080:3000 -v "C:\Users\Wesley\Desktop\volume-exemplo:/var/www" -w "/var/www" node npm start
+
+# Acessar no navegador:
+# http://localhost:8080/
+
+#################################################
