@@ -45,3 +45,22 @@ $ docker stop
 # docker start -a -i + id do container
 
 #################################################
+
+# Remover o container
+# docker rm + id do container
+$ docker rm 
+
+# Remover containers inativos
+$ docker container prune
+
+# Exibir imagens
+$ docker images
+
+# Remover imagens
+# docker rmi + nome da imagem
+$ docker rmi hello-world
+
+# Baixar imagem com versão
+$ docker run ubuntu:14.04
+
+#################################################
