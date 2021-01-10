@@ -1,0 +1,19 @@
+# Donwload do Docker for Windows
+# https://desktop.docker.com/win/stable/Docker%20Desktop%20Installer.exe
+
+# Requisitos para instalação do Docker no Windows:
+# Arquitetura 64 bits
+# Versão Pro, Enterprise ou Education.
+# Virtualização habilitada
+# Necessário habilitar Hyper-V
+
+# Verificar versão
+$ docker version
+
+# Realizar o "Hello World"
+$ docker run hello-world
+
+# Utilizando o Play With Docker	(caso haja problemas em instalar o docker na máquina)
+# https://labs.play-with-docker.com/
+
+#################################################
