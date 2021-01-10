@@ -213,3 +213,23 @@ $ docker run -it --name meu-container-de-ubuntu --network minha-rede ubuntu
 $ docker inspect meu-container-de-ubuntu
 
 #################################################
+
+# Construir projeto
+# Baixar imagem alura-books:cap05
+$ docker pull douglasq/alura-books:cap05
+
+# Baixar Mongo
+$ docker pull mongo
+
+# Subir container meu mongo
+$ docker run -d --name meu-mongo --network minha-rede mongo
+
+# Subir container
+$ docker run --network minha-rede -d -p 8080:3000 douglasq/alura-books:cap05
+
+# Acessar no navegador:
+# http://localhost:8080
+# http://localhost:8080/seed
+# http://localhost:8080
+
+#################################################
